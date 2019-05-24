@@ -1,0 +1,29 @@
+{
+  "name": "h5p-electron-player",
+  "version": "0.0.1",
+  "description": "Wraps H5P into Electron for offline use",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-h5p-core": "mkdir h5p && cp -r node_modules/h5p-nodejs-library/h5p/core ./h5p/core",
+    "player": "node_modules/electron/dist/electron src/index.js"
+  },
+  "keywords": [
+    "h5p",
+    "electron"
+  ],
+  "author": "Sebastian Rettig",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "electron": "^5.0.2",
+    "fs-extra": "^8.0.1",
+    "h5p-extractor": "file:../H5P-Extractor",
+    "h5p-nodejs-library": "file:../h5p-nodejs-library"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
